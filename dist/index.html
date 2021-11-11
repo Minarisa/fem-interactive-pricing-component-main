@@ -19,41 +19,39 @@
     <h1>
       Simple, traffic-based pricing
     </h1>
-    <p>
-      Sign-up for our 30-day trial.
-    </p>
-    <p> 
-      No credit card required.
-    </p>
+    <div>
+      <p>
+        Sign-up for our 30-day trial.
+      </p>
+      <p> 
+        No credit card required.
+      </p>
+    </div>
   </header>
   <main>
     <div>
       <div>
-        <p>
-          <span></span> Pageviews
+        <p id="pageviews">
+          <span id="view-counter"></span> Pageviews
         </p> 
       </div>
-      <div>
+      <div id="slider">
         <input type="range" name="" id="" value="0" min="0" max="200">
       </div>
-      <div>
-        <p>$ /month</p>
+      <div id="monthly-cost">
+        <p id="cost">$16.00</p><p> / month</p>
       </div>
-      <div>
-        <p>
+      <div id="billing-type">
+        <label for="toggle" id="toggle-container">
           Monthly Billing
-        </p>
-        <div>
           <input type="checkbox" id="toggle"/>
-          <label for="toggle"></label>
-        </div>
-        <p>
-          Yearly Billing <span>25% discount</span> 
-        </p>
+          <span id="custom-toggle"></span>
+          Yearly Billing <span id="discount">25% discount</span>
+        </label>
       </div>
     </div>
     <div>
-      <ul>
+      <ul id="advantages">
         <li>
           Unlimited websites
         </li>

@@ -1,24 +1,37 @@
 @use '_resets';
+@use '_togglebutton';
 @use '_variables' as var;
 
 body {
     font-family: var.$font-family;
     font-size: var.$font-size;
+    font-weight: var.$font-normal;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var.$main-background;
+    background-image: url(../../images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    color: var.$secondary-text;
 }
 
 header,
 main {
-    width: 44rem;
+    min-width: 85vw;
+    // max-width: 44rem;
 }
 
 header { 
+    background-image: url(../../images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 11.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 16rem;
+    line-height: 1.7rem;
 
     p {
         text-align: center;
@@ -26,20 +39,26 @@ header {
 }
 
 h1 {
+    margin-bottom: 1rem;
     text-align: center;
     width: 100%;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    font-weight: var.$font-bold;
+    color: var.$primary-text;
 }
 
 main {
+    height: 25rem;
+    margin-bottom: 40px;
     background-color: var.$empty-slider-bar;
     border-radius: var.$radius;
-    box-shadow: 0px 50px 40px var.$empty-slider-bar;
     display: grid;
     gap: 2px;
+    box-shadow: 0px 10px 20px var.$empty-slider-bar;
+    font-size: 0.8rem;
 
     div {
-        background-color: white;
+        background-color: var.$pricing-background;
 
         &:first-of-type {
             border-top-left-radius: var.$radius;
@@ -51,4 +70,48 @@ main {
             border-bottom-right-radius: var.$radius;
         }
     }
+}
+
+#monthly-cost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+#cost {
+    color: var.$primary-text;
+    font-size: 2rem;
+    font-weight: var.$font-bold;
+    padding-right: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+
+#discount {
+    background-color: var.$discount-background;
+    color: var.$discount-text;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    font-weight: var.$font-bold;
+}
+
+
+#advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.9rem;
+    
+
+    li {
+        list-style: url(../../images/icon-check.svg);
+    }
+}
+
+footer {
+    background-color: var.$main-background;
+    position: absolute;
+    bottom: 5px;
 }
