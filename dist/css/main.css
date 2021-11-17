@@ -9,15 +9,50 @@ body {
   height: 100%;
 }
 
-#toggle-container {
+#toggle {
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+}
+
+#billing-type {
   display: flex;
   justify-content: center;
 }
 
-#toggle {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+#toggle-container {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#custom-toggle {
+  display: block;
+  justify-content: center;
+  width: 40px;
+  height: 20px;
+  background-color: aqua;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#custom-toggle::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: red;
+  border-radius: 9px;
+  position: absolute;
+  transition: 0.5s;
+}
+
+#custom-toggle::after + #input:checked {
+  left: calc(100% -2px);
+  transform: translateX(-100%);
 }
 
 body {
